@@ -2,20 +2,16 @@
 
 @section('content')
     <div class="container text-center">
-        <h1>{{ $project->name_project }}</h1>
-        @if ($project->project_logo_img)
-            <div>
-                <img class="w-25" src="{{ asset("storage/$project->project_logo_img") }}" alt="{{ $project->name_project }}">
-            </div>
-            <p>{!! $project->summary !!}</p>
+        <h1>{{ $type->name }}</h1>
+        @if ($type->projects)
+            <h3>Tipologie associate:</h3>
+            <ul>
+                @foreach ($type->projects as $project)
+                    <li><a href="{{ route('admin.projects.show', $type) }}">{{ $project->name_project }}</a></li>
+                @endforeach
+            </ul>
+        @else
+            <h3>Nessuna tipologia associata</h3>
         @endif
-        @if ($project->doc_project)
-            <div>
-                <a href="{{ asset("storage/$project->doc_project") }}" download>
-                    <i class="fa-solid fa-file-arrow-down"></i> Download File
-                </a>
-            </div>
-            <p>{!! $project->summary !!}</p>
-        @endif
-        <a href="{{ route('admin.projects.index') }}"class="btn btn-primary">Torna alla lista dei progetti</a>
+        <a href="{{ route('admin.types.index') }}"class="btn btn-primary">Torna alla lista dei progetti</a>
     @endsection

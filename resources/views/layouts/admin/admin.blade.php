@@ -70,7 +70,14 @@
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.projects.index' || Route::currentRouteName() == 'admin.projects.create' || Route::currentRouteName() == 'admin.projects.edit' || Route::currentRouteName() == 'admin.projects.show' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.projects.index') }}">
                                     <i class="fa-regular fa-folder-open"></i>
-                                    Projects
+                                    I Progetti
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ (Route::currentRouteName() == 'admin.types.index' || Route::currentRouteName() == 'admin.projects.create' || Route::currentRouteName() == 'admin.projects.edit' || Route::currentRouteName() == 'admin.projects.show' ? 'bg-secondary' : '' || Route::currentRouteName() == 'admin.types.show') ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.types.index') }}">
+                                    <i class="fa-regular fa-folder-open"></i>
+                                    Tipologie di progetto
                                 </a>
                             </li>
                         </ul>

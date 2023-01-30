@@ -32,7 +32,9 @@ class UpdateProjectRequest extends FormRequest
                 'shipped_at' => 'required|date|before:tomorrow',
                 'project_logo_img' => 'nullable|image|max:2048',
                 'doc_project' => 'nullable|mimes:zip,txt,pdf|max:2048',
-                'no_image' => 'nullable'
+                'no_image' => 'nullable',
+                'type_id' => 'nullable|exists:types,id'
+
 
         ];
     }

@@ -17,10 +17,13 @@
             </div>
             <p>{!! $project->summary !!}</p>
         @endif
-        @if ($project->type)
-            Tipo di progetto: <a href="{{ route('admin.types.show', $project->type) }}">{{ $project->type->name }}</a>
-        @else
-            Nessun tipo di progetto
-        @endif
+        <h4>
+            @if ($project->type)
+                Tipo di progetto: <a href="{{ route('admin.types.show', $project->type) }}">{{ $project->type->name }}</a>
+            @else
+                Nessun tipo di progetto
+            @endif
+        </h4>
+
         <a href="{{ route('admin.projects.index') }}"class="btn btn-primary">Torna alla lista dei progetti</a>
     @endsection
