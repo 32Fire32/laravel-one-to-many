@@ -106,7 +106,13 @@ class TypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Type $type)
+
     {
-        //
+       $old_title = $type->name;
+
+        $type->delete();
+
+        return redirect()->route('admin.types.index')->with('message', "La tipologia $old_title è stata eliminata con successo!");;
+
     }
 }

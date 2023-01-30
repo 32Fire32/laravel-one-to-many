@@ -32,6 +32,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome Progetto</th>
+                    <th scope="col">Tipologia</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Cliente</th>
                     <th scope="col">Data creazione</th>
@@ -43,6 +44,7 @@
                     <tr>
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->name_project }}</td>
+                        <td>{{ $project->type->name }}</td>
                         <td>{{ $project->slug }}</td>
                         <td>{{ $project->client }}</td>
                         <td>{{ $project->shipped_at }}</td>
