@@ -5,7 +5,7 @@
         <div class="d-flex align-items-center justify-content-between p-5">
             <h1>Lista dei tipi di progetto:</h1>
             <a href="{{ route('admin.types.create') }}" class="btn btn-warning" data-bs-toggle="popover"
-                title="Clicca qui per inserire un nuovo progetto" data-bs-trigger="hover">Crea una nuova tipologia di
+                title="Clicca qui per inserire una nuova tipologia" data-bs-trigger="hover">Crea una nuova tipologia di
                 progetto</a>
         </div>
         @if (session('message'))
