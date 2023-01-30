@@ -7,7 +7,7 @@
             <h3>Tipologie associate:</h3>
             <ul>
                 @foreach ($type->projects as $project)
-                    <li><a href="{{ route('admin.projects.show', $type) }}">{{ $project->name_project }}</a></li>
+                    <li><a href="{{ route('admin.projects.show', $project) }}">{{ $project->name_project }}</a></li>
                 @endforeach
             </ul>
         @else
