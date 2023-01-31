@@ -3,8 +3,7 @@
 @section('content')
     <div class="container text-center">
         <h1>{{ $type->name }}</h1>
-        @if ($type->projects)
-            <h3>Tipologie associate:</h3>
+        @if ($type->projects->isNotEmpty)
             <ul>
                 @foreach ($type->projects as $project)
                     <li><a href="{{ route('admin.projects.show', $project) }}">{{ $project->name_project }}</a></li>
