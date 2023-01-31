@@ -76,7 +76,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ (Route::currentRouteName() == 'admin.types.index' || Route::currentRouteName() == 'admin.projects.create' || Route::currentRouteName() == 'admin.projects.edit' || Route::currentRouteName() == 'admin.projects.show' ? 'bg-secondary' : '' || Route::currentRouteName() == 'admin.types.show') ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.types.index') }}">
-                                    <i class="fa-regular fa-folder-open"></i>
+                                    <i class="fa-solid fa-list"></i>
                                     Tipologie di progetto
                                 </a>
                             </li>

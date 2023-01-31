@@ -17,7 +17,7 @@
             @enderror
 
             <button type="submit" class="btn btn-primary">Modifica</button>
-            <a href="{{ route('admin.projects.index') }}"class="btn btn-secondary">Torna alla lista dei progetti</a>
+            <a href="{{ route('admin.types.index') }}"class="btn btn-secondary">Torna alla lista delle tipologie</a>
         </form>
     </div>
 @endsection

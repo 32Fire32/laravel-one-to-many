@@ -14,10 +14,12 @@
                 Welcome to Boolfolio
             </h1>
 
-            <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in
-                previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your
-                liking.</p>
-            <button class="btn btn-primary btn-lg" type="button">Scopri</button>
+            <p class="col-md-8 fs-4">Here you can find extremely interesting PortFolios!.</p>
+            @guest
+                <a href="{{ route('register') }}" class="btn btn-primary btn-lg" type="button">Registrati</a>
+            @else
+                <a href="{{ url('/admin/dashboard') }}" class="btn btn-primary btn-lg" type="button">Entra</a>
+            @endguest
         </div>
     </div>
 @endsection

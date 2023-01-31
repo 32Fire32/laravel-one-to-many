@@ -13,5 +13,5 @@
         @else
             <h3>Nessuna tipologia associata</h3>
         @endif
-        <a href="{{ route('admin.types.index') }}"class="btn btn-primary">Torna alla lista dei progetti</a>
+        <a href="{{ route('admin.types.index') }}"class="btn btn-primary">Torna alla lista delle tipologie</a>
     @endsection
